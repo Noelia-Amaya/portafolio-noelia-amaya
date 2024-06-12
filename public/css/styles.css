@@ -1,0 +1,50 @@
+/* *IMPORT */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Darker+Grotesque:wght@300..900&display=swap');
+
+/* *IMPORT ESTILOS DE COMPONENTES */
+@import url('../../components/nav/nav.css');
+@import url('../../components/footer/footer.css');
+
+@font-face {
+    font-family: 'Cream Cake';
+    src: url(/assets/fonts/Cream\ Cake.otf);
+}
+
+/* *VARIABLES */
+:root {
+    --colorPrimary: #30182E;
+    --colorSecondary: #0c0215;
+    --colorTertiary: #9A2E35;
+    --colorCuaternary: #BB3539;
+    
+    --colorComplementaryPrimary: #FFFFFF;
+    --colorComplementarySecondary: #000000;
+
+    --fontTitle: "Aclonica", sans-serif;
+    --fontSubtitle: "Montserrat", sans-serif;
+    --fontBody: "Darker Grotesque", sans-serif;
+
+}
+
+/* *FORMATEAR PÁGINA */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html body {
+    width: 100%;
+    background-color: var(--colorComplementaryPrimary);
+    font-family: var(--fontBody);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 23px;
+}

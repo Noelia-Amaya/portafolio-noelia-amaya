@@ -1,0 +1,123 @@
+@import url('../../public/css/styles.css');
+
+/* * VISTA DESKTOP DE 1024 x 600 */
+.contenedor-contacto {
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: var(--colorSecondary);
+}
+
+.contenedor-form {
+    width: 420px;
+    height: 440px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: var(--colorComplementaryPrimary);
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+.contenedor-form h1 {
+    font-size: 30px;
+    text-align: center;
+    font-family: var(--fontTitle);
+}
+
+.contenedor-form .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input, textarea {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 14px;
+    color: var(--colorComplementaryPrimary);
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box textarea {
+    height: 100px;
+}
+
+.input-box input::placeholder {
+    color: var(--colorComplementaryPrimary);
+}
+
+.input-box textarea::placeholder {
+    color: var(--colorComplementaryPrimary);
+}
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+}
+
+.contenedor-form .btn-container {
+    display: flex;
+    justify-content: center; /* Centrar el botón horizontalmente */
+}
+
+.contenedor-form .btn {
+    width: 50%;
+    height: 50px;
+    margin-top: 35px;
+    background: var(--colorComplementaryPrimary);
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--colorComplementarySecondary);
+    font-weight: 600;
+}
+
+
+
+/* *MEDIA QUERY DESKTOP */
+@media screen and (min-width: 1440px) {
+    .contenedor-form {
+        width: 650px;
+        height: 547px;
+    }
+
+    .contenedor-form h1 {
+        font-size: 40px;
+    }
+
+    .input-box i {
+        font-size: 33px;
+    }
+
+    .input-box input, textarea {
+        font-size: 18px;
+    }
+
+    .input-box textarea {
+        height: 180px;
+    }
+
+    .contenedor-form .btn {
+        margin-top: 130px;
+        font-size: 18px;
+    }
+
+}

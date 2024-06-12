@@ -1,0 +1,107 @@
+@import url('../../public/css/styles.css');
+
+/* * INICIAR CON ESTILOS DESDE MOBILE */
+nav {
+    background-color: var(--colorPrimary);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    z-index: 1000; 
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li {
+    height: 80px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: var(--colorComplementaryPrimary);
+}
+
+nav a:hover {
+    background-color: var(--colorCuaternary);
+}
+
+nav li:first-child {
+    margin-right: auto;
+    background: none;
+}
+
+nav li:first-child a {
+    background: none; 
+}
+
+nav li:first-child a img {
+    width: 90px; 
+}
+
+.sideBar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 999;
+    background-color: rgba(48, 24, 46, 0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.5);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sideBar li {
+    width: 100%;
+}
+
+.sideBar a {
+    width: 100%;
+}
+
+.esconderEnMobil {
+    display: none;
+}
+
+/* *MEDIA QUERY TABLET */
+@media screen and (min-width: 768px) {
+    .esconderEnMobil {
+        display: none;
+    }
+
+    .sideBar {
+        width: 50%;
+    }
+
+}
+
+/* *MEDIA QUERY DESKTOP */
+@media screen and (min-width: 1024px) {
+    nav li {
+        height: 60px;
+    }
+    
+    .esconderEnMobil {
+        display: flex;
+    }
+
+    .menu-boton {
+        display: none;
+    }
+
+
+
+}
