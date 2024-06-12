@@ -9,7 +9,10 @@
     align-items: center;
     min-height: 100vh;
     overflow: hidden;
-    background-color: var(--colorSecondary);
+    background-image: url(/public/img/fondo-contacto.jpg);
+    background-repeat: no-repeat; /* No repetir la imagen */
+    background-size: cover; /* Hacer que la imagen cubra todo el contenedor */
+    background-position: center; /* Centrar la imagen */
 }
 
 .contenedor-form {
@@ -83,14 +86,45 @@
     border: none;
     outline: none;
     border-radius: 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, .2);
     cursor: pointer;
     font-size: 14px;
     color: var(--colorComplementarySecondary);
     font-weight: 600;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
+.contenedor-form .btn:hover {
+    background: var(--colorTertiary);
+    color: var(--colorComplementaryPrimary);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .8);
+}
 
+.contenedor-form .btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, .2);
+}
+
+/* Añadir efectos de onda en el botón */
+.contenedor-form .btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.15);
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+}
+
+.contenedor-form .btn:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
 
 /* *MEDIA QUERY DESKTOP */
 @media screen and (min-width: 1440px) {
@@ -116,8 +150,7 @@
     }
 
     .contenedor-form .btn {
-        margin-top: 130px;
+        margin-top: 124px;
         font-size: 18px;
     }
-
 }
